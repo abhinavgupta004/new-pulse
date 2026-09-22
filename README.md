@@ -128,3 +128,8 @@ cd scraper
 pip install -r requirements.txt
 pytest tests
 ```
+## Live URLS
+
+ Live frontend: https://new-pulse-six.vercel.app
+ Live backend: https://new-pulse.onrender.com
+
