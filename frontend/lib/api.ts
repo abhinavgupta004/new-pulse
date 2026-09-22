@@ -36,7 +36,7 @@ export function getCluster(id: string): Promise<ClusterDetail> {
 export function triggerIngest(): Promise<{ jobId: string; status: string }> {
   // 409 means a job is already running server-side; the caller treats that
   // as "attach to the existing job" rather than a hard failure.
-  return request("/ingest/trigger", { method: "POST" }).catch((err) => {
+  return request<{ jobId: string; status: string }>("/ingest/trigger", { method: "POST" }).catch((err) => {
     if (err instanceof ApiError && err.status === 409 && typeof err.body.jobId === "string") {
       return { jobId: err.body.jobId, status: "running" };
     }
