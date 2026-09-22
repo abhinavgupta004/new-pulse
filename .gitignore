@@ -1,0 +1,15 @@
+# Python
+scraper/.venv/
+scraper/__pycache__/
+scraper/*.db
+scraper/.env
+
+# Node
+backend/node_modules/
+frontend/node_modules/
+frontend/.next/
+backend/.env
+frontend/.env.local
+
+# OS
+.DS_Store
